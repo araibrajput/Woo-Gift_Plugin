@@ -275,7 +275,7 @@ Given more time, I would add:
 
 ---
 
-**Author**: Areeb  
+**Author**: Yasrab  
 **Version**: 1.0.0  
 **WordPress Compatibility**: 5.0+  
 **WooCommerce Compatibility**: 5.0+  

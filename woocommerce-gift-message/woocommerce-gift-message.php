@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: WooCommerce Gift Message
- * Plugin URI: https://github.com/areeb/woocommerce-gift-message
+ * Plugin URI: https://github.com/Yasrab-dev/woocommerce-gift-message
  * Description: Adds a gift message field to WooCommerce products, allowing customers to include personalized messages with their orders.
  * Version: 1.0.0
- * Author: Areeb
- * Author URI: https://areeb.dev
+ * Author: Yasrab
+ * Author URI: https://github.com/Yasrab-dev
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: wc-gift-message
