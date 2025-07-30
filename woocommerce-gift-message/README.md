@@ -33,6 +33,7 @@ I've created a complete WordPress plugin that fulfills all the core requirements
 ```
 woocommerce-gift-message/
 ├── woocommerce-gift-message.php          # Main plugin file
+├── uninstall.php                         # Plugin cleanup on uninstall
 ├── includes/                             # Core functionality classes
 │   ├── class-wc-gift-message-frontend.php    # Product page field & validation
 │   ├── class-wc-gift-message-cart.php        # Cart & checkout display
@@ -45,6 +46,8 @@ woocommerce-gift-message/
 │   │   └── admin.css                         # Admin interface styles
 │   └── js/
 │       └── frontend.js                       # Character counter & validation
+├── languages/                            # Translation files
+│   └── README.md                             # Translation instructions
 └── README.md                             # This file
 ```
 
@@ -94,8 +97,9 @@ woocommerce-gift-message/
 
 1. Upload the `woocommerce-gift-message` folder to your `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Ensure WooCommerce is installed and active
+3. Ensure WooCommerce is installed and active (plugin will show an error if not)
 4. The gift message field will automatically appear on single product pages
+5. No additional configuration needed - works out of the box!
 
 ## Features in Detail
 
