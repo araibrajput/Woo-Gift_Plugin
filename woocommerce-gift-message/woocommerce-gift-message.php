@@ -27,6 +27,7 @@ define('WC_GIFT_MESSAGE_VERSION', '1.0.0');
 define('WC_GIFT_MESSAGE_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('WC_GIFT_MESSAGE_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('WC_GIFT_MESSAGE_PLUGIN_BASENAME', plugin_basename(__FILE__));
+define('WC_GIFT_MESSAGE_TEXT_DOMAIN', 'wc-gift-message');
 
 /**
  * Main WooCommerce Gift Message Plugin Class
@@ -81,7 +82,7 @@ class WC_Gift_Message_Plugin {
         $this->init_hooks();
         
         // Load text domain for internationalization
-        load_plugin_textdomain('wc-gift-message', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+        load_plugin_textdomain(WC_GIFT_MESSAGE_TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages/');
     }
     
     /**
