@@ -1,0 +1,278 @@
+/**
+ * Admin styles for WooCommerce Gift Message Plugin
+ * 
+ * This file contains all the CSS styles for the admin interface
+ * including order columns, meta boxes, and admin displays.
+ */
+
+/* Order List Table Gift Message Column */
+.wp-list-table .column-gift_message {
+    width: 150px;
+}
+
+.gift-message-preview {
+    display: inline-block;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+    font-style: italic;
+    cursor: help;
+}
+
+.gift-messages-count {
+    background: #007cba;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: help;
+}
+
+/* Order Details Table */
+.woocommerce_order_items_wrapper .gift-message-header {
+    width: 150px;
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.gift-message-cell {
+    vertical-align: top;
+    padding: 12px 8px;
+    border-left: 1px solid #ddd;
+}
+
+.gift-message-content {
+    max-width: 200px;
+}
+
+.gift-message-text {
+    color: #555;
+    font-style: italic;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Gift Message Meta Box */
+.gift-messages-meta-box {
+    margin: 0;
+}
+
+.gift-message-item {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.gift-message-item:last-child {
+    margin-bottom: 0;
+}
+
+.gift-message-item h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.gift-message-item .quantity {
+    color: #666;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.gift-message-item .gift-message-text {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0;
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+/* Gift Message Actions */
+.gift-message-actions {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.gift-message-actions .button {
+    margin-right: 10px;
+}
+
+/* Empty State */
+.gift-messages-meta-box p {
+    color: #666;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Responsive Design for Admin */
+@media screen and (max-width: 1200px) {
+    .wp-list-table .column-gift_message {
+        width: 120px;
+    }
+    
+    .gift-message-preview {
+        max-width: 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wp-list-table .column-gift_message {
+        display: none;
+    }
+    
+    .gift-message-header {
+        display: none;
+    }
+    
+    .gift-message-cell {
+        display: none;
+    }
+}
+
+/* Order Items Table Enhancement */
+.woocommerce_order_items {
+    position: relative;
+}
+
+.woocommerce_order_items .gift-message-header {
+    text-align: center;
+    border-left: 1px solid #dfdfdf;
+}
+
+.woocommerce_order_items .gift-message-cell .na {
+    color: #999;
+    font-style: italic;
+}
+
+/* Bulk Actions Styling */
+.tablenav .actions select option[value="export_gift_messages"] {
+    background-color: #f0f8ff;
+}
+
+/* Admin Notice Styles */
+.notice.gift-messages-exported {
+    border-left-color: #00a32a;
+}
+
+.notice.gift-messages-exported .notice-dismiss {
+    color: #00a32a;
+}
+
+/* Copy Button Styling */
+.gift-message-actions .button {
+    background: #0073aa;
+    border-color: #0073aa;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 1px 0 #006799;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+}
+
+.gift-message-actions .button:hover {
+    background: #005a87;
+    border-color: #005a87;
+    color: white;
+}
+
+.gift-message-actions .button:focus {
+    border-color: #5b9dd9;
+    color: white;
+    box-shadow: 0 0 0 1px #5b9dd9;
+}
+
+/* Tooltip Enhancement */
+.gift-message-preview[title]:hover::after,
+.gift-messages-count[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    z-index: 1000;
+    background: #333;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: -20px;
+    white-space: normal;
+    max-width: 250px;
+    word-wrap: break-word;
+}
+
+/* Loading States */
+.gift-message-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.gift-message-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Accessibility Improvements */
+.gift-message-preview:focus,
+.gift-messages-count:focus {
+    outline: 2px solid #005fcc;
+    outline-offset: 1px;
+}
+
+/* Dark Mode Support (WordPress 5.7+) */
+@media (prefers-color-scheme: dark) {
+    .gift-message-item {
+        background: #1e1e1e;
+        border-color: #3c434a;
+        color: #f0f0f1;
+    }
+    
+    .gift-message-item h4 {
+        color: #f0f0f1;
+    }
+    
+    .gift-message-item .gift-message-text {
+        background: #2c2c2c;
+        border-color: #3c434a;
+        color: #f0f0f1;
+    }
+    
+    .gift-message-preview {
+        color: #a7aaad;
+    }
+}
+
+/* Print Styles for Admin */
+@media print {
+    .gift-message-actions {
+        display: none;
+    }
+    
+    .gift-messages-count {
+        background: transparent;
+        color: black;
+        border: 1px solid black;
+    }
+}

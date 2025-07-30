@@ -1,0 +1,260 @@
+/**
+ * Frontend styles for WooCommerce Gift Message Plugin
+ * 
+ * This file contains all the CSS styles for the frontend display
+ * of gift message fields and content.
+ */
+
+/* Gift Message Field Wrapper */
+.wc-gift-message-wrapper {
+    margin: 20px 0;
+    padding: 0;
+    clear: both;
+}
+
+/* Gift Message Field Container */
+.wc-gift-message-field {
+    background: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.wc-gift-message-field:hover {
+    border-color: #ccc;
+}
+
+/* Gift Message Label */
+.wc-gift-message-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.wc-gift-message-help {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #666;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 16px;
+    margin-left: 5px;
+    cursor: help;
+    font-weight: normal;
+}
+
+.wc-gift-message-help:hover {
+    background: #333;
+}
+
+/* Gift Message Input */
+.wc-gift-message-input {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.wc-gift-message-input:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.1);
+}
+
+.wc-gift-message-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Character Counter */
+.wc-gift-message-counter {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+}
+
+.wc-gift-message-counter .current-length {
+    font-weight: 600;
+}
+
+.wc-gift-message-counter.warning .current-length {
+    color: #d63638;
+}
+
+.wc-gift-message-counter.limit-reached .current-length {
+    color: #d63638;
+    font-weight: 700;
+}
+
+/* Cart Display */
+.wc-gift-message-checkout {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-left: 3px solid #007cba;
+    border-radius: 0 4px 4px 0;
+}
+
+.wc-gift-message-checkout small {
+    color: #555;
+    font-size: 13px;
+}
+
+/* Order Confirmation and My Account Display */
+.wc-gift-message-display {
+    margin: 10px 0;
+    padding: 12px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+.wc-gift-message-order-confirmation {
+    background: #e8f5e8;
+    border-color: #28a745;
+}
+
+.wc-gift-message-my-account {
+    background: #fff3cd;
+    border-color: #ffc107;
+}
+
+.wc-gift-message-display strong {
+    color: #333;
+    margin-right: 8px;
+}
+
+.gift-message-text {
+    color: #555;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Thank You Page Gift Messages Summary */
+.wc-gift-messages-summary {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.wc-gift-messages-summary h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 2px solid #007cba;
+    padding-bottom: 8px;
+}
+
+.gift-messages-list {
+    margin: 0;
+}
+
+.gift-message-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.gift-message-item:last-child {
+    margin-bottom: 0;
+}
+
+.gift-message-item .product-name {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.gift-message-content {
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+    padding: 8px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wc-gift-message-wrapper {
+        margin: 15px 0;
+    }
+    
+    .wc-gift-message-field {
+        padding: 15px;
+    }
+    
+    .wc-gift-message-input {
+        min-height: 70px;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .wc-gift-messages-summary {
+        margin: 20px 0;
+        padding: 15px;
+    }
+    
+    .gift-message-item {
+        padding: 12px;
+    }
+}
+
+/* Accessibility Improvements */
+.wc-gift-message-input:focus {
+    outline: 2px solid #007cba;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wc-gift-message-field,
+    .wc-gift-message-input {
+        transition: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .wc-gift-message-field {
+        border-color: #000;
+    }
+    
+    .wc-gift-message-input {
+        border-color: #000;
+    }
+    
+    .wc-gift-message-help {
+        background: #000;
+        color: #fff;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .wc-gift-message-counter {
+        display: none;
+    }
+    
+    .wc-gift-message-help {
+        display: none;
+    }
+}
